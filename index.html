@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/weather-icon.svg"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox" id="switch">
+        <span class="slider round"></span>
+    </label>
+    <p class="celsius"> Celsius / </p>
+    <p class="fahrenheit">Fahrenheit</p>
+    <div class="weather">
+        <img src="" class="condition-icon">
+        <div class="condition"></div>
+        <div class="city title-size"></div>
+        <div class="temperature title-size"></div>
+        <label for="location">Search for a city</label>
+        <form action="">
+            <input type="text" id="location">
+        </form>
+        <div class="loading"></div>
+    </div>
+
+    <div class="weather-info">
+        <div class="info-title">
+            <img src="/assets/feels.svg" alt="">
+            <div>Feels like</div>
+            <div class="feels-like-data weather-data"></div>
+        </div>
+        <div class="info-title">
+            <img src="/assets/humidity.svg" alt="">
+            <div>Humidiy</div>
+            <div class="humidity-data weather-data"></div>
+        </div>
+        <div class="info-title">
+            <img src="/assets/wind.svg" alt="">
+            <div>Wind</div>
+            <div class="wind-data weather-data"></div>
+        </div>
+    </div>
+</body>
+</html>

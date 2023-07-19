@@ -1,0 +1,153 @@
+:root {
+    --my-color: purple;
+}
+
+.loading {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #9c41f2;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+
+.loading.display {
+    visibility: visible;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.weather {
+    display: grid;
+    place-content: center;
+    margin-top: 13vh;
+    justify-items: center;
+}
+
+.condition {
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+.title-size {
+    font-size: 3rem;
+}
+
+label[for=location] {
+    opacity: .4;
+    margin-top: 1vh;
+    margin-bottom: .5vh;
+}
+
+input {
+    width: 20vw;
+    height: 2vh;
+    border-style: none;
+    border: 2px solid black;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15vh;
+    font-size: 2rem;
+}
+
+.info-title {
+    display: grid;
+    justify-items: center;
+}
+
+.weather-data {
+    opacity: .6;
+    font-size: 1.75rem;
+}
+
+.condition-icon {
+    margin-bottom: -1vh;
+}
+
+p {
+    font-size: 1.1rem;
+    position: absolute;
+}
+
+.celsius {
+    top: 0px;
+    left: 80px;
+    color: white;
+}
+
+.fahrenheit {
+    top: 0px;
+    left: 150px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: var(--my-color);
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--my-color);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
