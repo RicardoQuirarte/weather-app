@@ -26,14 +26,14 @@ async function locationWeather(userValue) {
         humidity.textContent = locationData.current.humidity + ' %';
         wind.textContent = locationData.current.wind_kph + ' km/h';
         if(locationData.current.temp_c > 30) {
-            conditionImg.src = '/assets/hot-icon.svg';
-            document.body.style.backgroundImage = "url('/assets/hot.jpg')";
+            conditionImg.src = './hot-icon.svg';
+            document.body.style.backgroundImage = "url('./hot.jpg')";
         } else if (locationData.current.temp_c < 20) {
-            conditionImg.src = '/assets/cold-icon.jpg';
-            document.body.style.backgroundImage = "url('/assets/cold.jpg')";
+            conditionImg.src = './cold-icon.svg';
+            document.body.style.backgroundImage = "url('./cold.jpg')";
         } else {
-            conditionImg.src = '/assets/mid-icon.jpg';
-            document.body.style.backgroundImage = "url('/assets/mid.jpg')";
+            conditionImg.src = './mid-icon.svg';
+            document.body.style.backgroundImage = "url('./mid.jpg')";
         }
         toggleBtn.addEventListener('change', () => {
             if(toggle) {
@@ -49,9 +49,9 @@ async function locationWeather(userValue) {
                 fahrenheit.style.color = 'black';
                 toggle = true;
             }
+            console.log('hello');
         });
         hideLoading();
-        console.log(locationData);
     }
     catch {
         alert('We cannot find that location');
